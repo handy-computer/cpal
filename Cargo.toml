@@ -1,9 +1,12 @@
 [package]
-name = "cpal"
+# A fork of cpal 0.18.2 for handy-recorder, published until upstream releases
+# RustAudio/cpal#1387. Versions track the cpal release they fork. Depend on it
+# as `cpal = { package = "handy-cpal", version = "=0.18.2" }`.
+name = "handy-cpal"
 version = "0.18.2"
-description = "Low-level cross-platform audio I/O library."
-repository = "https://github.com/RustAudio/cpal"
-documentation = "https://docs.rs/cpal"
+description = "cpal 0.18.2 with a PulseAudio record-stream fix (RustAudio/cpal#1387). Temporary; use cpal once it ships."
+repository = "https://github.com/handy-computer/cpal"
+documentation = "https://docs.rs/handy-cpal"
 license = "Apache-2.0"
 keywords = ["audio", "sound", "playback", "recording", "cross-platform"]
 categories = ["multimedia::audio"]

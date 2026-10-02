@@ -1,3 +1,16 @@
+# handy-cpal
+
+A fork of [cpal](https://github.com/RustAudio/cpal) 0.18.2, published for
+[handy-recorder](https://github.com/handy-computer/handy-recorder) until upstream
+releases [RustAudio/cpal#1387](https://github.com/RustAudio/cpal/pull/1387).
+
+Modified from cpal 0.18.2: `src/host/pulseaudio/mod.rs` no longer caps a
+fixed-size record stream's buffer at one fragment, which stalled it on PulseAudio
+and starved a second stream on one connection under pipewire-pulse. Nothing else
+differs. Use `cpal` itself once a release includes that fix.
+
+---
+
 # CPAL - Cross-Platform Audio Library
 
 [![Actions Status](https://github.com/RustAudio/cpal/workflows/cpal/badge.svg)](https://github.com/RustAudio/cpal/actions) [![Crates.io](https://img.shields.io/crates/v/cpal.svg)](https://crates.io/crates/cpal) [![docs.rs](https://docs.rs/cpal/badge.svg)](https://docs.rs/cpal/)
